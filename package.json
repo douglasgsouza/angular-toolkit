@@ -8,6 +8,7 @@
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
     "watch": "tsc -w",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "cz": "git-cz"
   },

@@ -53,7 +53,7 @@ export class CordovaBuildBuilder implements Builder<CordovaBuildBuilderSchema> {
 
     // We always need to output the build to `www` because it is a hard
     // requirement of Cordova.
-    browserOptions.outputPath = join(cordovaBasePath, normalize('www'));
+    browserOptions.outputPath = getSystemPath(join(cordovaBasePath, normalize('www')));
 
     // Cordova CLI will error if `www` is missing. The Angular CLI deletes it
     // by default. Let's keep it around.
